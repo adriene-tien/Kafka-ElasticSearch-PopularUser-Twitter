@@ -12,9 +12,9 @@ public class ConsumerConfigs {
     private static String groupID = "kafka-to-elasticsearch";
 
     // ElasticSearch BONSAI access credentials/details
-    private static String hostname = "kafka-twitter-consum-5465534606.us-east-1.bonsaisearch.net";
-    private static String username = "blybf1dvb2";
-    private static String password = "kvvg510xie";
+    private static String hostname = "";
+    private static String username = "";
+    private static String password = "";
 
     public ConsumerConfigs() {}
 
