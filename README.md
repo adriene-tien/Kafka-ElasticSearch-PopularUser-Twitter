@@ -8,4 +8,4 @@ Over the summer term of 2019 I was lucky to have a fantastic internship experien
 
 
 # Next Steps / Improvements 
-At the moment this project is pretty much a purely backend-implemented project. What I have in mind for future iterations would be to create a nice dashboard where I can display all of these stored tweets, full with CSS animations and a generally aesthetic look. It would be a chance for me to learn more about web frontend too since I haven't experienced this to a sufficient level yet, I currently only have some basic experience with React.  
+At the moment this project is pretty much a purely backend-implemented project. What I have in mind for future iterations would be to create a nice dashboard where I can display all of these stored tweets, full with CSS animations and a generally aesthetic look. It would be a chance for me to learn more about web frontend too since I can't honestly say that I have experienced this to a sufficient level as of now. I currently only have some basic experience with React.  
