@@ -12,9 +12,9 @@ public class ConsumerConfigs {
     private static String groupID = "kafka-to-elasticsearch";
 
     // ElasticSearch BONSAI access credentials/details
-    private static String hostname = "";
-    private static String username = "";
-    private static String password = "";
+    private static String hostname = "kafka-twitter-consum-5465534606.us-east-1.bonsaisearch.net";
+    private static String username = "blybf1dvb2";
+    private static String password = "kvvg510xie";
 
     public ConsumerConfigs() {}
 
@@ -30,6 +30,16 @@ public class ConsumerConfigs {
 
     private static Properties setConsumerProperties()
     {
+        if (getBootstrapServer().isEmpty()
+                || getGroupID().isEmpty()
+                || getHostname().isEmpty()
+                || getUsername().isEmpty()
+                || getPassword().isEmpty()
+        ) {
+            System.out.println("Please make sure Consumer Configuration access details are set properly.");
+            System.exit(0);
+        }
+
         Properties properties = new Properties();
         properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
@@ -49,6 +59,5 @@ public class ConsumerConfigs {
         consumer.subscribe(Arrays.asList(followTopic));
         return consumer;
     }
-
 
 }

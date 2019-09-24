@@ -6,6 +6,7 @@ import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.nio.client.HttpAsyncClientBuilder;
+import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -29,11 +30,12 @@ public class ElasticSearchConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(ElasticSearchConsumer.class.getName());
     private static JsonParser jsonParser = new JsonParser();
-    private static Integer mostPopularUsers[] = new Integer[1000];
     private static String mostPopularUsersTweetDetails[][] = new String[1000][2];
     private static Integer userCountLimit = 0;
 
     public ElasticSearchConsumer() {}
+
+    public static void main(String[] args) throws IOException { new ElasticSearchConsumer().run(); }
 
     /**
      *
@@ -41,7 +43,16 @@ public class ElasticSearchConsumer {
      */
     private static RestHighLevelClient createClient()
     {
-        // Using Bonsai, which has some security settings - need credentials
+        if (ConsumerConfigs.getHostname().isEmpty()
+                || ConsumerConfigs.getUsername().isEmpty()
+                || ConsumerConfigs.getPassword().isEmpty()
+        ) {
+            logger.info("Please make sure the access details has been set properly: username, password, hostname, ...");
+            logger.info("Exiting...");
+            System.exit(0);
+        }
+
+        // Using Bonsai, which has some security settings - need credentials for this
         final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(
                 AuthScope.ANY,
@@ -50,8 +61,8 @@ public class ElasticSearchConsumer {
                         ConsumerConfigs.getPassword()
                 ));
 
-        // RestClientBuilder: we will connect through HTTPS to the hostname over port 443
-        // Encrypted connection to the cloud using the above credentials
+        // RestClientBuilder: connect through HTTPS to the hostname over port 443
+        // Encrypted connection to cloud
         RestClientBuilder builder = RestClient.builder(
                 new HttpHost(ConsumerConfigs.getHostname(), 443, "https"))
                 .setHttpClientConfigCallback(new RestClientBuilder.HttpClientConfigCallback() {
@@ -132,15 +143,14 @@ public class ElasticSearchConsumer {
             indexRequest.source(tweetJson, XContentType.JSON);
             logger.info(id);
 
-            bulkRequest.add(indexRequest); // add to our bulk request
+            // continue adding to our bulk request
+            bulkRequest.add(indexRequest);
 
             SortUsers.sort2DArrayByColumn(mostPopularUsersTweetDetails, 1);
         }
     }
 
-
-    public static void main(String[] args) throws IOException
-    {
+    private static void run() throws IOException {
         RestHighLevelClient client = createClient();
         KafkaConsumer<String, String> consumer = ConsumerConfigs.createConsumer("twitter_tweets");
         BulkRequest bulkRequest = new BulkRequest();
@@ -155,14 +165,13 @@ public class ElasticSearchConsumer {
             for(ConsumerRecord<String, String> record : records) {
 
                 // aim for idempotent processing to avoid duplicate tweets upon failure of consumer
-                // twitter feed specific id
-
+                // twitter JSON comes with an ID field, use this
                 try {
                     String id = extractFieldFromTweet("id_str", record.value());
                     String userFollowerCount = extractFieldFromTweet("followers_count", record.value());
                     ElasticSearchConsumer.keepTrackOfMostFollowedUsers(record.value(), userFollowerCount, id, client, bulkRequest);
-                } catch (NullPointerException e) {
-                    logger.info("caught bad data: " + record.value());
+                } catch (NullPointerException | IOException e) {
+                    logger.info("Bad data – id_str field missing from JSON object: " + record.value());
                 }
             }
 
@@ -178,9 +187,9 @@ public class ElasticSearchConsumer {
                 }
 
 
-                logger.info("Committing the offsets");
+                logger.info("Committing the offsets.");
                 consumer.commitSync();
-                logger.info("Offsets have been committed");
+                logger.info("Offsets have been committed!");
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

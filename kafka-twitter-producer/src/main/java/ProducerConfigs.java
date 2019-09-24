@@ -20,10 +20,10 @@ import java.util.concurrent.BlockingQueue;
 public class ProducerConfigs {
 
     private static String producerBootstrapServer = "127.0.0.1:9092";
-    private static String consumerKey = "";
-    private static String consumerSecret = "";
-    private static String token = "";
-    private static String secret = "";
+    private static String consumerKey = "iQBRbIcg9nYP0aHfXTQPsYzvu";
+    private static String consumerSecret = "RtYGEJBG5oVRRELXuOfNUL4NHvAsDF8ooeC0RpLtJxnkRRPfPH";
+    private static String token = "912105641661157381-TYO4mBa2wQS394YsLF0Kgye99wWpihN";
+    private static String secret = "QFmEKTclI0oIuigLjbVust4yqJJhzfDPtoRkdypAwLSQy";
     private static List<String> followTerms = Lists.newArrayList();
 
     public ProducerConfigs() {}
@@ -111,12 +111,9 @@ public class ProducerConfigs {
         Hosts hosebirdHosts = new HttpHosts(Constants.STREAM_HOST);
         StatusesFilterEndpoint hosebirdEndpoint = new StatusesFilterEndpoint();
 
-        //Optional: set up some followings and track terms
-        //List<Long> followings = Lists.newArrayList(1234L, 566788L);
-        //hosebirdEndpoint.followings(followings);
         hosebirdEndpoint.trackTerms(getFollowTerms());
 
-        // These secrets should be read from a config file, probably smart to put into separate file and import
+        // consider working with all credential vars in a config file instead
         Authentication hosebirdAuth = new OAuth1(getConsumerKey(), getConsumerSecret(), getToken(), getSecret());
 
         ClientBuilder builder = new ClientBuilder()

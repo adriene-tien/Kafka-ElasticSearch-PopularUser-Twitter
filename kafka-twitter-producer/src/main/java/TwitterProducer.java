@@ -42,14 +42,12 @@ public class TwitterProducer {
                         .getAsJsonObject();
 
                 // check if subfield member, in this case "followers_count", exists
-
                 boolean hasSubField = userObject.has(field);
 
                 if (hasSubField && !userObject.isJsonNull()) {
-                    // get field result as string
                     fieldData = userObject
                             .get(field)
-                            .getAsString(); //get subfield member as string
+                            .getAsString();
                 }
             }
         } else {
@@ -68,6 +66,7 @@ public class TwitterProducer {
         return fieldData;
     }
 
+    // this was part of an idea I had in initial iterations of the project - currently unused but keeping for now
     // define viral as favourite or retweet count as being over 100 times that of the user's follower count
     private static boolean viralTweet(String msg, Integer userFollowerCount )
     {
@@ -130,19 +129,14 @@ public class TwitterProducer {
     {
         logger.info("Setup");
 
-        /** Set up blocking queues: be sure to size properly based on
-         * expected TPS of stream
-         */
-        //tweets are sent to a message queue
+        /** Set up blocking queue: need to size properly based on expected TPS of stream */
         BlockingQueue<String> msgQueue = new LinkedBlockingQueue<String>(10000);
 
-        // create a twitter client
+        // create a twitter client and attempt to establish connection
         Client client = ProducerConfigs.createTwitterClient(msgQueue);
-
-        //attempts to establish a connection
         client.connect();
 
-        // create a kafka producer
+        // create a Kafka producer
         KafkaProducer<String, String> producer = ProducerConfigs.createProducer();
 
         // add a shutdown hook
