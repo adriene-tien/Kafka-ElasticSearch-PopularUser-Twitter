@@ -7,7 +7,7 @@ Over the summer term of 2019 I was lucky to have a fantastic internship experien
 # Current Details 
 Kafka 2.2-1 
 Elasticsearch Version 7.3 
-Make sure Kafka and Zookeeper servers are running:
+Make sure Kafka and Zookeeper servers are running:\n
 ```kafka-server-start config/server.properties```
 ```zookeeper-server-start config/zookeeper.properties```
 - Run producer -> Run consumer 
