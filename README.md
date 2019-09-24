@@ -5,10 +5,11 @@ A Kafka project that streams data from Twitter based on tracking terms inputted 
 Over the summer term of 2019 I was lucky to have a fantastic internship experience. I was originally placed in a data-related team, but due to the emergence of a large scale project I was subsequently shifted from it to another architecture-focused team. Before leaving, I had already sat through several team meetings and the frequent discussion about the use of Kafka piqued my interest. I figured that working on this project in my own time would give me some exposure to the data engineering / data streaming side of things that I would have gotten had I not switched teams - and I didn't know, maybe I'd return to my original team before my term was up! I wanted to be in a position where I could potentially help with anything. 
 
 # Current Details 
-Kafka 2.2-1 
-Elasticsearch Version 7.3 
-Make sure Kafka and Zookeeper servers are running: ```kafka-server-start config/server.properties```, 
-```zookeeper-server-start config/zookeeper.properties```
+Kafka 2.2-1<br/> 
+Elasticsearch Version 7.3<br/> 
+Make sure Kafka and Zookeeper servers are running:<br/> 
+```kafka-server-start config/server.properties```<br/> 
+```zookeeper-server-start config/zookeeper.properties```<br/>
 - Run producer -> Run consumer 
 
 # Next Steps / Improvements 
