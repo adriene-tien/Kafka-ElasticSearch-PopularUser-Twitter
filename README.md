@@ -13,4 +13,4 @@ Make sure Kafka and Zookeeper servers are running:<br/>
 - Run producer -> Run consumer 
 
 # Next Steps / Improvements 
-At the moment this project is pretty much a purely backend-implemented project. What I have in mind for future iterations would be to create a nice dashboard where I can display all of these stored tweets, full with CSS animations and a generally aesthetic look. It would be a chance for me to learn more about web frontend too since I can't honestly say that I have experienced this to a sufficient level as of now. I currently only have some basic experience with React.  
+At the moment, this project is a purely backend-implemented project. What I have in mind for future iterations would be to create a nice dashboard where I can display all of these stored tweets, full with CSS animations (for live updating if a tweet from a more popular user is received) and just a generally aesthetic look. It would be a chance for me to learn more about web frontend and UI/UX too since I can't honestly say that I have experienced this to a sufficient level. I currently only have some basic experience with React.  
