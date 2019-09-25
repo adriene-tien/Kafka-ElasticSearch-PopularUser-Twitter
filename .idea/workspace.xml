@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75ac454e-1cff-4ee0-b897-00e5823aaa47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ConsumerConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ConsumerConfigs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ElasticSearchConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ElasticSearchConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-elasticsearch-consumer/target/classes/ConsumerConfigs.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-elasticsearch-consumer/target/classes/ConsumerConfigs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-elasticsearch-consumer/target/classes/ElasticSearchConsumer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-elasticsearch-consumer/target/classes/ElasticSearchConsumer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-elasticsearch-consumer/target/classes/ElasticSearchConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-elasticsearch-consumer/target/classes/ElasticSearchConsumer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kafka-twitter-producer/src/main/java/ProducerConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-twitter-producer/src/main/java/ProducerConfigs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-twitter-producer/src/main/java/TwitterProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-twitter-producer/src/main/java/TwitterProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-twitter-producer/target/classes/TwitterProducer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-twitter-producer/target/classes/TwitterProducer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-twitter-producer/target/classes/TwitterProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-twitter-producer/target/classes/TwitterProducer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ElasticSearchConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="145" column="30" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+            <state relative-caret-position="1779">
+              <caret line="143" column="14" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-elasticsearch-consumer/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="244">
               <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="54" selection-end-column="21" />
             </state>
           </provider>
@@ -52,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ConsumerConfigs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="240">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,17 +57,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            <state relative-caret-position="345">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kafka-twitter-producer/src/main/java/ProducerConfigs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1253">
-              <caret line="115" column="77" selection-start-line="115" selection-start-column="77" selection-end-line="115" selection-end-column="77" />
+            <state relative-caret-position="173">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-twitter-producer/src/main/java/TwitterProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
+            <state relative-caret-position="2295">
               <caret line="155" column="34" lean-forward="true" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -124,6 +117,7 @@
       <find>trackingLimit</find>
       <find>hostname</find>
       <find>shutdown</find>
+      <find>logger.info</find>
       <find>callback</find>
     </findStrings>
   </component>
@@ -141,10 +135,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ThreadedExecution.java" />
         <option value="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/MergeSort.java" />
         <option value="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/SortUsers.java" />
-        <option value="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ConsumerConfigs.java" />
-        <option value="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ElasticSearchConsumer.java" />
-        <option value="$PROJECT_DIR$/kafka-twitter-producer/src/main/java/ProducerConfigs.java" />
         <option value="$PROJECT_DIR$/kafka-twitter-producer/src/main/java/TwitterProducer.java" />
+        <option value="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ElasticSearchConsumer.java" />
+        <option value="$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ConsumerConfigs.java" />
+        <option value="$PROJECT_DIR$/kafka-twitter-producer/src/main/java/ProducerConfigs.java" />
       </list>
     </option>
   </component>
@@ -581,15 +575,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="345">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ElasticSearchConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="145" column="30" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+        <state relative-caret-position="1779">
+          <caret line="143" column="14" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -598,25 +592,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-elasticsearch-consumer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
+        <state relative-caret-position="244">
           <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="54" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-elasticsearch-consumer/src/main/java/ConsumerConfigs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-twitter-producer/src/main/java/ProducerConfigs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1253">
-          <caret line="115" column="77" selection-start-line="115" selection-start-column="77" selection-end-line="115" selection-end-column="77" />
+        <state relative-caret-position="240">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -625,8 +609,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-twitter-producer/src/main/java/TwitterProducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
+        <state relative-caret-position="2295">
           <caret line="155" column="34" lean-forward="true" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-twitter-producer/src/main/java/ProducerConfigs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

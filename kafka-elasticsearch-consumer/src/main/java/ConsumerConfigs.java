@@ -9,12 +9,12 @@ import java.util.Properties;
 public class ConsumerConfigs {
 
     private static String bootstrapServer = "127.0.0.1:9092";
-    private static String groupID = "kafka-to-elasticsearch";
+    private static String groupID = "";
 
     // ElasticSearch BONSAI access credentials/details
-    private static String hostname = "kafka-twitter-consum-5465534606.us-east-1.bonsaisearch.net";
-    private static String username = "blybf1dvb2";
-    private static String password = "kvvg510xie";
+    private static String hostname = "";
+    private static String username = "";
+    private static String password = "";
 
     public ConsumerConfigs() {}
 

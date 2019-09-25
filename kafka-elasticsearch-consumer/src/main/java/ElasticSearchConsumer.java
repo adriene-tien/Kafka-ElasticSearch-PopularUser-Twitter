@@ -128,7 +128,7 @@ public class ElasticSearchConsumer {
             IndexRequest indexRequest = new IndexRequest("tweets");
             indexRequest.id(id);
             indexRequest.source(tweetJson, XContentType.JSON);
-            logger.info(id);
+            //logger.info(id);
 
             userCountLimit++;
         } else if (Integer.parseInt(userFollowerCount) > Integer.parseInt(mostPopularUsersTweetDetails[0][1])) {
@@ -141,7 +141,7 @@ public class ElasticSearchConsumer {
             IndexRequest indexRequest = new IndexRequest("tweets");
             indexRequest.id(id);
             indexRequest.source(tweetJson, XContentType.JSON);
-            logger.info(id);
+            //logger.info(id);
 
             // continue adding to our bulk request
             bulkRequest.add(indexRequest);

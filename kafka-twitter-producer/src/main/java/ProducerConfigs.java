@@ -20,10 +20,10 @@ import java.util.concurrent.BlockingQueue;
 public class ProducerConfigs {
 
     private static String producerBootstrapServer = "127.0.0.1:9092";
-    private static String consumerKey = "iQBRbIcg9nYP0aHfXTQPsYzvu";
-    private static String consumerSecret = "RtYGEJBG5oVRRELXuOfNUL4NHvAsDF8ooeC0RpLtJxnkRRPfPH";
-    private static String token = "912105641661157381-TYO4mBa2wQS394YsLF0Kgye99wWpihN";
-    private static String secret = "QFmEKTclI0oIuigLjbVust4yqJJhzfDPtoRkdypAwLSQy";
+    private static String consumerKey = "";
+    private static String consumerSecret = "";
+    private static String token = "";
+    private static String secret = "";
     private static List<String> followTerms = Lists.newArrayList();
 
     public ProducerConfigs() {}
