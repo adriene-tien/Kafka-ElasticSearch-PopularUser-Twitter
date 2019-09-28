@@ -4,6 +4,8 @@ A Kafka project that streams data from Twitter based on tracking terms inputted 
 # Motivation 
 Over the summer term of 2019 I was lucky to have a fantastic internship experience. I was originally placed in a data-related team, but due to the emergence of a large scale project I was subsequently shifted from it to another architecture-focused team. Before leaving, I had already sat through several team meetings and the frequent discussion about the use of Kafka piqued my interest. I figured that working on this project in my own time would give me some exposure to the data engineering / data streaming side of things that I would have gotten had I not switched teams - and I didn't know, maybe I'd return to my original team before my term was up! I wanted to be in a position where I could potentially help with anything. 
 
+This combined with the fact that Twitter is a platform I frequent quite often. For the memes, for sports, for games, for politics, there's a lot that comes from Twitter that I enjoy. 
+
 # Current Details 
 Kafka 2.2-1<br/> 
 Elasticsearch Version 7.3<br/> 
